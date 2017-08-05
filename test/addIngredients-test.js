@@ -18,7 +18,7 @@ describe('addIngredients', () => {
     ], recipeForm: {ingredientIds: [1, 2]}});
     const wrapper = mount(
       <Provider store={store}>
-        < ConnectedAddIngredients />
+        <ConnectedAddIngredients />
       </Provider>
     )
     let WrapperConnectedAddIngredients = wrapper.find(ConnectedAddIngredients).first()
@@ -36,7 +36,7 @@ describe('addIngredients', () => {
     let ingredients = [{id: 1, name: 'dough'},
       {id: 2, name: 'tomato sauce'}, {id: 3, name: 'cheese'}
       ]
-    const addIngredients = shallow(< AddIngredients
+    const addIngredients = shallow(<AddIngredients
       selectedIngredients={selectedIngredients}
       unselectedIngredients={unselectedIngredients}
       ingredients={ingredients}/>)
@@ -51,7 +51,7 @@ describe('addIngredient', () => {
     let ingredient = {id: 1, name: 'dough'}
     const wrapper = mount(
       <Provider store={store}>
-        < ConnectedAddIngredient {...ingredient} />
+        <ConnectedAddIngredient {...ingredient} />
       </Provider>
     )
     let WrapperConnectedAddIngredient = wrapper.find(ConnectedAddIngredient).first()
@@ -69,7 +69,7 @@ describe('addIngredients with Recipe', () => {
     store.getState().recipeForm = {ingredientIds: [1, 2]}
       const wrapper = mount(
         <Provider store={store}>
-          < ConnectedRecipesInput />
+          <ConnectedRecipesInput />
         </Provider>
       )
 
